@@ -10,3 +10,8 @@ jobs:
       uses: actions/checkout@v5
     - name: Lancement graphviz
       run: ./run1.sh g1
+    - name: upload du resultat
+      uses: actions/upload-artifact@v4
+      with:
+        name: temp_artifacts
+        path: g1.svg
